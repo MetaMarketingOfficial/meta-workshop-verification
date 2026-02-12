@@ -16,32 +16,39 @@
 
         .card {
             background: #ffffff;
-            width: 600px;
-            padding: 50px;
+            width: 650px;
+            padding: 60px;
             border-radius: 25px;
             text-align: center;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+            position: relative;
         }
 
-        /* 🔹 Bigger Logo */
+        /* 🔹 Logo */
         .logo {
-            width: 220px;
+            width: 230px;
             margin-bottom: 30px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
         }
 
-        /* 🔹 Smaller Tick */
+        /* 🔹 Animated Tick */
         .badge {
-            font-size: 55px;
+            font-size: 60px;
             margin-bottom: 20px;
+            animation: pop 0.6s ease-out;
         }
 
+        @keyframes pop {
+            0% { transform: scale(0); }
+            70% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        /* 🔹 Glowing Title */
         h1 {
             color: #16a34a;
-            font-size: 34px;
+            font-size: 36px;
             margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(22,163,74,0.4);
         }
 
         h3 {
@@ -57,7 +64,7 @@
 
         .status {
             margin-top: 25px;
-            padding: 14px;
+            padding: 15px;
             background: #e0f2fe;
             color: #0369a1;
             font-weight: bold;
@@ -65,8 +72,19 @@
             font-size: 18px;
         }
 
+        /* 🔹 Certificate ID Box */
+        .certificate-id {
+            margin-top: 20px;
+            padding: 12px;
+            border: 2px dashed #1e3a8a;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #1e3a8a;
+            background: #f8fafc;
+        }
+
         .footer {
-            margin-top: 30px;
+            margin-top: 35px;
             font-size: 14px;
             color: #64748b;
         }
@@ -77,10 +95,8 @@
 
     <div class="card">
 
-        <!-- Bigger Logo -->
         <img src="./logo.png" class="logo" alt="Official Logo">
 
-        <!-- Smaller Tick -->
         <div class="badge">✅</div>
 
         <h1>Certificate Verified</h1>
@@ -93,6 +109,10 @@
             Status: Authentic & Globally Recognized
         </div>
 
+        <div class="certificate-id">
+            Certificate ID: MMW-2026-001
+        </div>
+
         <div class="footer">
             Verification powered by Meta Marketing Official <br>
             © 2026 All Rights Reserved
@@ -102,3 +122,4 @@
 
 </body>
 </html>
+
